@@ -3,9 +3,9 @@ package graph.bfs;
 public class Permutation {
 
     public static void main(String[] args) {
-        int n = 3;                                  // 3가지 숫자 중
-        int r = 2;                                  // 2개를 뽑을 경우
-        int[] input = {1,2,3};                      // 주어진 3가지 숫자
+        int n = 5;                                  // 3가지 숫자 중
+        int r = 3;                                  // 2개를 뽑을 경우
+        int[] input = {1,2,3,4,5};                      // 주어진 3가지 숫자
         int[] answer = new int[r];                  // 정답을 담을 배열
         boolean[] check = new boolean[n];           // 해당 숫자를 방문했는지 체크
 
@@ -13,11 +13,11 @@ public class Permutation {
         // 순열
         permutation(n, r, input, check, answer, 0);
         // 중복순열
-        permutationDup(n, r, input, answer, 0);
+//        permutationDup(n, r, input, answer, 0);
         // 조합
-        combination(answer, input, n, r, 0, 0);
+//        combination(answer, input, n, r, 0, 0);
         // 중복조합
-        combinationDup(answer, input, n, r, 0, 0);
+//        combinationDup(answer, input, n, r, 0, 0);
 
     }
 

@@ -1,68 +1,91 @@
 package greedy;
 
 import java.util.Arrays;
-import java.util.PriorityQueue;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class B1202 {
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         int jewelry_size = sc.nextInt();
         int bag_size = sc.nextInt();
-
-        Jewelry[] jewelries = new Jewelry[jewelry_size + bag_size];
-
+        Jewelry[] jewelries = new Jewelry[jewelry_size];
         for (int i = 0; i < jewelry_size; i++) {
             int weight = sc.nextInt();
             int value = sc.nextInt();
-            jewelries[i] = new Jewelry(weight,value,0);
+            jewelries[i] = new Jewelry(weight, value, false);
         }
+
+        TreeMap<Integer, Integer> bags = new TreeMap<>();
         for (int i = 0; i < bag_size; i++) {
             int max_weight = sc.nextInt();
-            jewelries[jewelry_size + i] = new Jewelry(max_weight, 0, 1);
+            Integer count = bags.get(max_weight);
+            if(count == null) {
+                count = 0;
+            }
+            count += 1;
+            bags.put(max_weight, count);
         }
         Arrays.sort(jewelries);
-        PriorityQueue<Integer> q = new PriorityQueue<>();
-        long answer = 0;
-        for (Jewelry jewelry: jewelries) {
-            if(jewelry.diff == 0) {
-                // 보석만 빼서 큐에 넣는다
-                q.offer(-jewelry.value);
-            } else {
-                // 가방일 경우는 오름차순으로 정렬되어 있으므로 가장 작은 무게 중에 가장 비싼 보석 먼저 꺼내게 된다
-                if(!q.isEmpty()) {
-                    answer += -q.poll();
+        long ans = 0;
+        for (int i = 0; i < jewelry_size; i++) {
+            /*
+             * Tree Map
+             * - BST (Binary Search Tree)
+             * - 키를 오름차순으로 정렬
+             * - 키와 크가나 같은 근사값을 가질 수 있다
+             */
+            Map.Entry<Integer, Integer> bag = bags.ceilingEntry(jewelries[i].weight);
+            if(bag != null) {
+                ans += jewelries[i].value;
+
+                if(bag.getValue() - 1 == 0) {
+                    bags.remove(bag.getKey());
+                } else {
+                    bags.put(bag.getKey(), bag.getValue() - 1);
                 }
             }
+
         }
-        System.out.println(answer);
+
+        System.out.println(ans);
     }
 
-    static class Jewelry implements Comparable<Jewelry>{
+    static class Jewelry implements Comparable<Jewelry> {
         int weight;
         int value;
-        int diff;
+        boolean check;
 
-        public Jewelry(int weight, int value, int diff) {
+        public Jewelry(int weight, int value, boolean check) {
             this.weight = weight;
             this.value = value;
-            this.diff = diff;
+            this.check = check;
         }
 
         @Override
         public int compareTo(Jewelry that) {
-            // 오름차순
-            if(this.weight < that.weight) {
-                return -1;
-            } else if(this.weight == that.weight) {
-                // 오른차순
-                if(this.diff < that.diff) return -1;
-                else if(this.diff == that.diff) return 0;
-                else return 1;
-            } else {
+            // 상대방이 나보다 더 커져야하므로 양수가 되서 오름차순
+            if(this.value < that.value) {
                 return 1;
+            } else if(this.value > that.value) {
+                return -1;
+            } else {
+                return 0;
             }
+        }
+
+        @Override
+        public String toString() {
+            return "Jewelry{" +
+                    "weight=" + weight +
+                    ", value=" + value +
+                    ", check=" + check +
+                    '}';
         }
     }
 }
+
+
