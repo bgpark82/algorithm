@@ -17,9 +17,9 @@ public class B13023 {
         int node = sc.nextInt();
         int edge = sc.nextInt();
 
-        List<Edge> 간선리스트 = new ArrayList<>();
         boolean[][] 인접행렬 = new boolean[node][node];
         ArrayList<Integer>[] 인접리스트 = new ArrayList[node];
+        List<Edge> 간선리스트 = new ArrayList<>();
 
         for (int i = 0; i < node; i++) {
             인접리스트[i] = new ArrayList<>();

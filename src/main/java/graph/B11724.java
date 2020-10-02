@@ -1,50 +1,61 @@
 package graph;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class B11724 {
 
-    static ArrayList<Integer>[] 인접리스트;
-    static boolean[] check;
-
+    private static List<Integer>[] 연결리스트;
+    private static boolean[] check;
+    /**
+     * 1. 방향없음
+     * 2. 같은 간선은 한번만
+     */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int node = sc.nextInt();
-        int edge = sc.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int node = scanner.nextInt();
+        int edge = scanner.nextInt();
 
-        인접리스트 = new ArrayList[node + 1];
-
-        for (int i = 1; i <= node; i++) {
-            인접리스트[i] = new ArrayList<>();
-        }
-        // 인접리스트에는 간선 개수만큼의 from,to와 to,from이 들어가게 된다
-        for (int i = 1; i <= edge; i++) {
-            int from = sc.nextInt();
-            int to = sc.nextInt();
-            인접리스트[from].add(to);
-            인접리스트[to].add(from);
-        }
+        연결리스트 = new ArrayList[node + 1];
         check = new boolean[node + 1];
-        int answer = 0;
 
         for (int i = 1; i <= node; i++) {
-            // 이미 방문한 노드는 하위 노드가 없는 것이 판별되었음으로 더 들어갈 필요가 없다
+            연결리스트[i] = new ArrayList<>();
+        }
+
+        for (int i = 1; i <= edge; i++) {
+            int from = scanner.nextInt();
+            int to = scanner.nextInt();
+            연결리스트[from].add(to);
+            연결리스트[to].add(from);
+        }
+
+        int count = 0;
+        // 처음에는 그냥 1로 시작 (주어진 시작점이 없으므로)
+        for (int i = 1; i <= node; i++) {
+            // 다음 인덱스 (2,3,...)이 왔을 때 이미 방문했으면 걸러내기 위해
             if(!check[i]) {
                 dfs(i);
-                answer += 1;
+                count++;
             }
         }
-        System.out.println(answer);
+        System.out.println(count);
     }
 
+    /**
+     * 1. 시작점
+     * 2. 연결리스트
+     * 3. 체크
+     */
     private static void dfs(int start) {
-        if(check[start]) return;
+        // 방문한 적이 없으면 방문체크
         check[start] = true;
-        for (int a : 인접리스트[start]) {
-            if(!check[a]) {
-                dfs(a);
+        List<Integer> nodes = 연결리스트[start];
+        for (Integer node : nodes) {
+            // 자식 노드한번씩 도는데 자식 노드들을 처음 꺼내 보는 것이므로 검증 필요하지
+            if(!check[node]) {
+                dfs(node);
             }
         }
     }
