@@ -6,39 +6,66 @@ import java.io.InputStreamReader;
 
 public class B11723 {
 
+    // {1,.., 20} : 총 21개
+    private static int N = 21;
+    private static int S = 0;
+
     public static void main(String[] args) throws IOException {
-        // BufferReader, InputStreamReader와 readLine으로 시간절약 가능
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int size = Integer.valueOf(bf.readLine());
+
+        int size  = Integer.parseInt(bf.readLine());
         StringBuilder sb = new StringBuilder();
-        int N = 21;
-        int S = 0;
+
         for (int i = 0; i < size; i++) {
-            String line = bf.readLine();
-            String[] command = line.split(" ");
-            if(command[0].equals("add")) {
-                int number = Integer.parseInt(command[1]);
+            String[] s = bf.readLine().split(" ");
+            String operation = s[0];
+            int number = (operation.equals("all") || operation.equals("empty")) ? 1 : Integer.parseInt(s[1]);
+
+
+            go(operation, number, sb);
+        }
+        System.out.println(sb.toString());
+        bf.close();
+    }
+
+    private static void go(String operation, int number, StringBuilder sb) {
+        switch (operation) {
+            // |
+            case "add":
                 S = S | (1 << number);
-            } else if(command[0].equals("remove")) {
-                int number = Integer.parseInt(command[1]);
-                S = S & ~(1 << number);
-            } else if(command[0].equals("check")){
-                int number = Integer.parseInt(command[1]);
+                break;
+
+            // & ~
+            case "remove":
+                S = S &~(1 << number);
+                break;
+
+            // &
+            case "check":
                 int result = S & (1 << number);
                 if(result == 0) {
                     sb.append("0\n");
                 } else {
                     sb.append("1\n");
                 }
-            } else if(command[0].equals("toggle")) {
-                int number = Integer.parseInt(command[1]);
+                break;
+
+            // ^
+            case "toggle":
                 S = S ^ (1 << number);
-            } else if(command[0].equals("all")) {
-                S = (1 << N) - 1;
-            } else if(command[0].equals("empty")) {
+                break;
+
+            // 0
+            case "empty":
                 S = 0;
-            }
+                break;
+
+            // all
+            case "all":
+                S = (1 << N) - 1;
+                break;
+            default:
+                break;
         }
-        System.out.println(sb.toString());
     }
 }

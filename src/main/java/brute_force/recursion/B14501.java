@@ -1,41 +1,60 @@
 package brute_force.recursion;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class B14501 {
 
-    private static int[] time;
-    private static int[] money;
-    private static int answer = 0;
+    private static List<Consultant> list = new ArrayList<>();
     private static int size;
+    private static int max;
 
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        size = sc.nextInt();
-        time = new int[size]; money = new int[size];
+        Scanner scanner = new Scanner(System.in);
+        size = scanner.nextInt();
+
         for (int i = 0; i < size; i++) {
-            time[i] = sc.nextInt();
-            money[i] = sc.nextInt();
+            int date = scanner.nextInt();
+            int price = scanner.nextInt();
+            list.add(new Consultant(date, price));
         }
-        dfs(0,0);
-        System.out.println(answer);
+
+        go(0, 0);
+        System.out.println(max);
     }
 
-    private static void dfs(int depth, int sum) {
+    private static void go(int index, int sum) {
 
-        if(depth == size) {
-            if(answer < sum) {
-                answer = sum;
-            }
+        if(index == size) {
+            max = Math.max(max, sum);
             return;
         }
-        if(depth > size) {
+
+        if(index > size) {
             return;
         }
-        int t = time[depth];
-        dfs(depth + t, sum + money[depth]);
-        dfs(depth + 1, sum);
+
+        int date = list.get(index).date;
+        int price = list.get(index).price;
+
+        // 가지칠 조건이 매우 중요하다
+        // 갔다가 다시 돌아오는 개념이 중요하구나
+        go(index + date, sum + price);
+        go(index + 1, sum);
+    }
+
+    static private class Consultant {
+        int date;
+        int price;
+
+        public Consultant(int date, int price) {
+            this.date = date;
+            this.price = price;
+        }
     }
 }
+
+
+
