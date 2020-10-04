@@ -1,7 +1,6 @@
 package coding_test.kakao.kakao2021;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Q2 {
 
