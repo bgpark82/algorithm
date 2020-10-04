@@ -11,7 +11,7 @@ public class Combination {
         combination(0,0);
     }
 
-    private static void combination(int index,int depth) {
+    private static void combination(int index, int depth) {
         // 3. 마지막 노드까지 갔을 때 출력
         if(depth == r) {
             print();
