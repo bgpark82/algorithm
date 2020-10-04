@@ -8,30 +8,51 @@ import java.util.Arrays;
 public class B10815 {
 
     public static void main(String[] args) throws IOException {
-        // 버퍼 사용하는게 두배정도 빠르다
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(br.readLine());
+
+        // 500,000번 정도면 BufferReader 써야되나?
+        int[] list = Arrays.stream(br.readLine()
+                .split(" "))
+                .mapToInt(Integer::parseInt)
+                .sorted()
+                .toArray();
+
+        int r = Integer.parseInt(br.readLine());
+
+        int[] answer = Arrays.stream(br.readLine()
+                .split(" "))
+                .mapToInt(Integer::parseInt)
+                .toArray();
+
+        go(list, answer);
+    }
+
+    private static void go(int[] list, int[] answer) {
         StringBuilder sb = new StringBuilder();
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int first = Integer.parseInt(bf.readLine());
-        int[] array1 = Arrays.stream(bf.readLine().split(" ")).mapToInt(Integer::parseInt).sorted().toArray();
-        int second = Integer.parseInt(bf.readLine());
-        String[] array2 = bf.readLine().split(" ");
-        for (int i = 0; i < second; i++) {
-            int number = Integer.parseInt(array2[i]);
-            boolean check = binary_search(number, array1);
-            if(check) sb.append("1 ");
-            else sb.append("0 ");
+        for (int i = 0; i < answer.length; i++) {
+            int number = answer[i];
+            if(search(number, list)) {
+                sb.append("1 ");
+            } else {
+                sb.append("0 ");
+            }
         }
         System.out.println(sb.toString());
     }
 
-    static boolean binary_search(int number, int[] array) {
+    private static boolean search(int number, int[] list) {
+
+        // 리스트의 값이 아니라 인덱스
         int left = 0;
-        int right = array.length - 1;
+        int right = list.length - 1;
 
         while(left <= right) {
-            int mid = (left + right) / 2;
-            if(array[mid] == number) return true;
-            else if(number < array[mid]) {
+            int mid = (left + right)/2;
+            if(list[mid] == number) return true;
+            if(number < list[mid]) {
                 right = mid - 1;
             } else {
                 left = mid + 1;
