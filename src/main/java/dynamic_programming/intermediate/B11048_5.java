@@ -2,6 +2,11 @@ package dynamic_programming.intermediate;
 
 import java.util.Scanner;
 
+/**
+ * i, j '에서' 이동했을 때 가져올 수 있는 최대 사탕 개수
+ * 최종적으로 1, 1에서 정답을 가지고 있다
+ * 기존의 방법과 다르게 가장 끝점에서 부터 시작점으로 돌아오고 정답은 시작점에 있다
+ */
 public class B11048_5 {
 
     private static int[][] arr;
