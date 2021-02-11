@@ -1,13 +1,13 @@
 # vector
 
 ### sequence container
-List in java = enable to change its size, size handle by container
-it grows the size when it needs to allocate more elements
-allocate new array and move all elements into
-but do not allocate each time
-so they prepare extra space for storage for the future
-constant time complexity anyway
-less heavier than array, but more efficient
+* List in java = enable to change its size, size handle by container
+* it grows the size when it needs to allocate more elements
+* allocate new array and move all elements into
+* but do not allocate each time
+* so they prepare extra space for storage for the future
+* constant time complexity anyway
+* less heavier than array, but more efficient
 
 ### container
 holding the collection object
