@@ -5,12 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "g++ 디버깅",
             "type": "lldb",
             "request": "launch",
-            "name": "Lldb debug",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
-            "cwd": "${workspaceRoot}"
+            // "cwd": "${workspaceFolder}",
+            "preLaunchTask": "C/C++: g++ 활성 파일 빌드"
         }
     ]
 }
