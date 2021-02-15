@@ -5,12 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb",
+            "name": "(lldb) 시작",
+            "type": "cppdbg",
             "request": "launch",
-            "name": "Lldb debug",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "프로그램 이름 입력(예: ${workspaceFolder}/a.out)",
             "args": [],
-            "cwd": "${workspaceRoot}/c++"
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "externalTerminal",
+            "MIMode": "lldb"
         }
     ]
 }
