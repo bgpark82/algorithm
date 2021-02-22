@@ -5,7 +5,8 @@
             "label": "C/C++: g++ 활성 파일 빌드",
             "command": "/usr/bin/g++",
             "args": [
-                "-g",
+                "-std=c++11",
+                "-g",                
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
