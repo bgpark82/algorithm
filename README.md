@@ -16,6 +16,7 @@ This is the personal algorithm repo since 2020. It covers [beakjoon](https://www
 * [B2109](https://github.com/bgpark82/algorithm/tree/master/c%2B%2B/greedy/B2109)
 * [B2138](https://github.com/bgpark82/algorithm/tree/master/c%2B%2B/greedy/B2138)
 * [B2875](https://github.com/bgpark82/algorithm/tree/master/c%2B%2B/greedy/B2875)
+* [B2109](https://github.com/bgpark82/algorithm/tree/master/c%2B%2B/greedy/B2109)
 
 ## Java
 It hasn't been updated, since I switched from Java to C++ in performance reason. but still enable to access to history of the problems.

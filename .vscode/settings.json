@@ -3,6 +3,8 @@
         "algorithm": "cpp",
         "vector": "cpp",
         "ostream": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "__tree": "cpp",
+        "set": "cpp"
     }
 }

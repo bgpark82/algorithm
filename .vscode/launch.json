@@ -15,6 +15,15 @@
             "environment": [],
             "console": "externalTerminal",
             "MIMode": "lldb"
+        },
+        {
+            "name": "g++ 디버깅",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            // "cwd": "${workspaceFolder}",
+            "preLaunchTask": "C/C++: g++ 활성 파일 빌드"
         }
     ]
 }
