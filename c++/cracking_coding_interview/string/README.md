@@ -24,3 +24,23 @@ Time Complexity
 Space Complexity
     - O(1)
     - fixed size boolean array in heap (one address)
+
+### 2. bit vector
+
+You should check
+    - bit vector consists of 0 and 1 (similar to boolean array)
+    - It can be fill up with 1 from right to left (...111111)
+    - Check **each digits** : 111 & 10, 111 & 100, ...
+    - Add **each digits** : 100 | 10, 100 | 10, ...
+
+Time Complexity
+    - O(n)
+    - Length of string
+
+Space Complexity
+    - O(1)
+    - primitive int value
+
+### In a nutshell
+1. **boolean array == bit mask**
+2. Use bit mask add(|), check(&) operation
