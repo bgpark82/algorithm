@@ -2,35 +2,33 @@
 #include <algorithm>
 
 using namespace std;
+bool arr[128];
+
+bool answer(string s)
+{
+    // index out of bound check
+    if(s.length() > 128) {
+        return false;
+    }
+    for (int i = 0; i < s.length(); i++)
+    {
+        int index = int(s[i]);
+        if (arr[index])
+        {
+            return false;
+        }
+        arr[index] = true;
+    }
+    return true;
+}
 
 int main(void)
 {
-
     // 모든 문자가 unique한지 자료구조없이 찾아봐라
-    string a = "abcdae";
-    bool check = true;
-    int arr[128]; 
-    fill(arr, arr + 128, 0);
+    string s = "abcde";
+    bool ans = answer(s);
 
-    for (int i = 0; i < a.length(); i++)
-    {
-        for (int j = 0; j < 128; j++)
-        {
-            int index = int(a[i]);
-            if (arr[index] == 0)
-            {
-                arr[index] = 1;
-                break;
-            }
-            else
-            {
-                check = false;
-                break;
-            }
-        }
-    }
-
-    if (check)
+    if (ans)
     {
         cout << "유니크한 값" << endl;
     }
