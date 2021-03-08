@@ -18,12 +18,12 @@ You should check
 - If you use an array, you must check this **index out of bound**
 
 Time Complexity
-- O(n)
+- `O(n)`
 - Length of string
-- If it was an int array, it could have been O(n^2) (Length of string x int array size) 
+- If it was an int array, it could have been `O(n^2)` (Length of string x int array size) 
   
 Space Complexity
-- O(1)
+- `O(1)`
 - fixed size boolean array in heap (one address)
 
 ### 2. bit vector
@@ -31,18 +31,18 @@ Space Complexity
 You should check
 - bit vector consists of 0 and 1 == boolean array
 - It can be fill up with 1 from right to left
-  - 1111
+  - `1111`
 - Check **each digits**
-  - 111 & 10, 111 & 100, ...
+  - `111 & 10`, `111 & 100`, ...
 - Add **each digits**
-  -  100 | 10, 100 | 10, ...
+  -  `100 | 10`, `100 | 1`, ...
 
 Time Complexity
-- O(n)
+- `O(n)`
 - Length of string
 
 Space Complexity
-- O(1)
+- `O(1)`
 - Primitive int value
 
 ### In a nutshell
