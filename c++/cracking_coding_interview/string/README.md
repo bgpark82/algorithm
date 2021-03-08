@@ -47,4 +47,4 @@ Space Complexity
 
 ### In a nutshell
 1. **boolean array == bit mask**
-2. Use **add**(|), **check**(&) operation to check each index
+2. Use **add**(`|`), **check**(`&`) operation to check each index
