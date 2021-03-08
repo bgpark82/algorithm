@@ -13,7 +13,7 @@ Ask to interviewer
 ### 1. boolean array
 
 You should check
-- It only takes true and false
+- It only takes **true and false**
 - You can also return false immediately
 - If you use an array, you must check this **index out of bound**
 
@@ -21,7 +21,7 @@ Time Complexity
 - O(n)
 - Length of string
 - If it was an int array, it could have been O(n^2) (Length of string x int array size) 
-- 
+  
 Space Complexity
 - O(1)
 - fixed size boolean array in heap (one address)
@@ -47,4 +47,4 @@ Space Complexity
 
 ### In a nutshell
 1. **boolean array == bit mask**
-2. Use bit mask add(|), check(&) operation
+2. Use **add**(|), **check**(&) operation to check each index
