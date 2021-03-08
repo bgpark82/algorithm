@@ -29,10 +29,13 @@ Space Complexity
 ### 2. bit vector
 
 You should check
-- bit vector consists of 0 and 1 (similar to boolean array)
-- It can be fill up with 1 from right to left (...111111)
-- Check **each digits** : 111 & 10, 111 & 100, ...
-- Add **each digits** : 100 | 10, 100 | 10, ...
+- bit vector consists of 0 and 1 == boolean array
+- It can be fill up with 1 from right to left
+  - 1111
+- Check **each digits**
+  - 111 & 10, 111 & 100, ...
+- Add **each digits**
+  -  100 | 10, 100 | 10, ...
 
 Time Complexity
 - O(n)
@@ -40,7 +43,7 @@ Time Complexity
 
 Space Complexity
 - O(1)
-- primitive int value
+- Primitive int value
 
 ### In a nutshell
 1. **boolean array == bit mask**
