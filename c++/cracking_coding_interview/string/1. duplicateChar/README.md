@@ -65,15 +65,15 @@ Space Complexity
 3 & (1 << 2)  // 111 & 10 = 1 
 5 & (1 << 2)  // 101 & 10 = 0 
 ```
-`3 & (1 << 2)` : the second 1 from behind exist
-`5 & (1 << 2)` : the second 1 from behind not exist
+- `3 & (1 << 2)` : the second 1 from behind exist
+- `5 & (1 << 2)` : the second 1 from behind not exist
 
 ```
 3 | (1 << 2)  // 111 | 10 = 1111 
 5 | (1 << 2)  // 101 | 10 = 111
 ```
-`3 | (1 << 2)` : add 1 at second 1 from behind
-`5 | (1 << 2)` : add 1 at second 1 from behind
+- `3 | (1 << 2)` : add 1 at second 1 from behind
+- `5 | (1 << 2)` : add 1 at second 1 from behind
 
 ### In a nutshell
 1. **boolean array == bit mask**
