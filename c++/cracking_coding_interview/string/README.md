@@ -8,6 +8,21 @@ Ask to interviewer
 - Extended ASCII need a total 256 storage size
 - [ASCII vs Unicode](https://whatisthenext.tistory.com/103)
 
+### ASCII
+- 128 characters
+- Only Enlish
+- It has a lowercase, uppercase letter and symbols
+- Its character code are 7bit long
+
+### Extended ASCII
+- 256 characters
+- its character code are 8bit long
+
+### Unicode
+- Wide range of characters
+- Supports different languages
+- 8bit, 16bit or 32bit depending on encoding type
+
 ## Attempt
 
 ### 1. boolean array

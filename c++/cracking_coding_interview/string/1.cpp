@@ -35,6 +35,7 @@ bool answer2(string s)
         {
             return false;
         }
+        // mark each digits
         check = check | (1 << index);
     }
     return true;
