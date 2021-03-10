@@ -1,4 +1,4 @@
-### Permutation
+# Permutation
 
 ## What you should ask
 1. is it case sensitive?
@@ -10,7 +10,7 @@
 3. Two words with the same number of characters
 
 ## Solution
-1. first solution
+### 1. first solution
     - The same length
     - The same character, but different order
 ```
@@ -33,7 +33,7 @@ bool isPermutation(string &origin, string &target)
 ```
 - Time complexity : `O(n)`
 
-2. second solution
+### 2. second solution
     - Two words with the same number of characters
 ```
 bool isPermutation(string origin, string target)
