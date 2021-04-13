@@ -8,5 +8,7 @@
         "set": "cpp",
         "iterator": "cpp",
         "iosfwd": "cpp"
-    }
+    },
+    "editor.fontWeight": 400,
+    "editor.fontFamily": "JetBrains Mono"
 }
