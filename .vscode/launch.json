@@ -5,24 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(lldb) 시작",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "프로그램 이름 입력(예: ${workspaceFolder}/a.out)",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "console": "externalTerminal",
-            "MIMode": "lldb"
-        },
-        {
-            "name": "g++ 디버깅",
+            "name": "c++ 디버깅",
             "type": "lldb",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
-            // "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}",
             "preLaunchTask": "C/C++: g++ 활성 파일 빌드"
         }
     ]
