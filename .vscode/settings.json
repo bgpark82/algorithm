@@ -1,6 +1,15 @@
 {
     "files.associations": {
         "vector": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "sstream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "__functional_base": "cpp",
+        "array": "cpp",
+        "locale": "cpp",
+        "memory": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp"
     }
 }
