@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution"
+        },
+        {
             "name": "c++ 디버깅",
             "type": "lldb",
             "request": "launch",

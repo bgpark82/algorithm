@@ -1,0 +1,1 @@
+map.compute(letter, (key, value) -> (value == null) ? 1 : value + 1);
