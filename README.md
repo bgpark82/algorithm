@@ -3,13 +3,13 @@ This is the personal algorithm repo since 2020. It covers [beakjoon](https://www
 
 ## Coding Test
 ### Kakao 2021
-* [Question 1](https://github.com/bgpark82/algorithm/test/kakao/2021/1)
-* [Question 2](https://github.com/bgpark82/algorithm/test/kakao/2021/2)
-* [Question 3](https://github.com/bgpark82/algorithm/test/kakao/2021/3)
-* [Question 4](https://github.com/bgpark82/algorithm/test/kakao/2021/4)
-* [Question 5](https://github.com/bgpark82/algorithm/test/kakao/2021/5)
-* [Question 6](https://github.com/bgpark82/algorithm/test/kakao/2021/6)
-* [Question 7](https://github.com/bgpark82/algorithm/test/kakao/2021/7)
+* [Question 1](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/1)
+* [Question 2](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/2)
+* [Question 3](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/3)
+* [Question 4](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/4)
+* [Question 5](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/5)
+* [Question 6](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/6)
+* [Question 7](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/7)
 ## C++
 ### Greedy
 
