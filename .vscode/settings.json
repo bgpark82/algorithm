@@ -11,6 +11,8 @@
         "memory": "cpp",
         "tuple": "cpp",
         "utility": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "__node_handle": "cpp",
+        "algorithm": "cpp"
     }
 }
