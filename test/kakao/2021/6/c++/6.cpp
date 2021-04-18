@@ -17,7 +17,7 @@ struct Point {
 // 상하좌우 offset 값 정의
 int D[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
-// [bfs 탐색]
+// [bfs 탐색 : 시작점부터 끝점까지 가는데 필요한 횟수]
 int bfs(Point src, Point dst) {
     bool visited[4][4] = {false};
     queue<Point> q;
@@ -47,9 +47,11 @@ int bfs(Point src, Point dst) {
 
             // 2칸, 3칸 이동한 경우
             for (int j = 0; j < 2; ++j) {
+                // 숫자 발견한 경우 한칸 이동한 것으로 간주 0
                 if (Board[nr][nc] != 0) {
                     break;
                 }
+                // 범위를 벗어난 경우 멈춤
                 if (nr + D[i][0] < 0 || nr + D[i][0] > 3 || nc + D[i][1] < 0 ||
                     nc + D[i][1] > 3) {
                     break;
@@ -68,12 +70,13 @@ int bfs(Point src, Point dst) {
     return INF;
 }
 
-// [순열: 전체탐색 ]
+// [순열: src에서 유효한 카드까지 이동 ]
 int permutate(Point src) {
     int ret = INF;
-    // 순열을 나타낼 때는 보통 반복문을 사용 (1번 카드부터 6번카드까지 조회)
+    // 1번 카드부터 6번카드까지 조회
     for (int num = 1; num <= 6; ++num) {
         vector<Point> card;
+        // 1번 카드부터 6번 카드까지 탐색 후 배열에 해당 Point 입력
         for (int i = 0; i < 4; ++i) {
             for (int j = 0; j < 4; ++j) {
                 if (Board[i][j] == num) {
@@ -85,9 +88,9 @@ int permutate(Point src) {
         // 카드가 다 뒤집어진 경우
         if (card.empty()) continue;
 
-        // 빈 공간에서 가장 가까운 카드까지 입력 횟수
-        int one = bfs(src, card[0]) + bfs(card[0], card[1]) + 2;
-        int two = bfs(src, card[1]) + bfs(card[1], card[0]) + 2;
+        // 빈 공간에서 가장 가까운 숫자 카드까지 입력 횟수
+        int one = bfs(src, card[0]) + bfs(card[0], card[1]) + 2;  // 정방향
+        int two = bfs(src, card[1]) + bfs(card[1], card[0]) + 2;  // 역방향
 
         // 카드 삭제
         for (int i = 0; i < 2; ++i) {

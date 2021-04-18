@@ -41,7 +41,7 @@ void traversal(int node) {
         }
     }
 
-    // 하
+    // 부모가 참석한 경우의 추가 요금 부여
     Cost[node][0] += extra;
 }
 
