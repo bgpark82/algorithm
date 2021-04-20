@@ -1,7 +1,8 @@
 # Algorithm Repo
-This is the personal algorithm repo since 2020. It covers [beakjoon](https://www.acmicpc.net/) and the several major company coding tests.  
+This is the algorithm achieve to keep tracking of the coding test journey since 2020. It covers [Kakao coding test](https://programmers.co.kr/learn/challenges), [beakjoon](https://www.acmicpc.net/) and other coding test questions by different categories. If you feel like overwhelmed by just looking at the difficult algorithm problems, It would definitely help for you to review the same question over and over until you can confidently explain someone. I inspired by the power of learning by teaching.
 
 ## Coding Test
+
 ### Kakao 2021
 * [Question 1](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/1)
 * [Question 2](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/2)
@@ -10,6 +11,13 @@ This is the personal algorithm repo since 2020. It covers [beakjoon](https://www
 * [Question 5](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/5)
 * [Question 6](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/6)
 * [Question 7](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2021/7)
+
+### Kakao 2020
+* [Question 1](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2020/1)
+* [Question 2](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2020/2)
+* [Question 3](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2020/3)
+* [Question 4](https://github.com/bgpark82/algorithm/tree/master/test/kakao/2020/4)
+  
 ## C++
 ### Greedy
 
