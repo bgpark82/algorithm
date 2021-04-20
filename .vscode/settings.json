@@ -13,6 +13,19 @@
         "utility": "cpp",
         "string": "cpp",
         "__node_handle": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "stack": "cpp",
+        "ios": "cpp",
+        "deque": "cpp",
+        "functional": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "unordered_map": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "__locale": "cpp",
+        "__string": "cpp",
+        "regex": "cpp",
+        "string_view": "cpp"
     }
 }
