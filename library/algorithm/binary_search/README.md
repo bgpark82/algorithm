@@ -16,6 +16,8 @@
 ## Complexity
 - `O(log2(N))`
 
+## Version
+- since C++ 20
 ## Exmaple
 ```
 #include <algorithm>
