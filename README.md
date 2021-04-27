@@ -53,6 +53,12 @@ This is the algorithm achieve to keep tracking of the coding test journey since 
 **sequence: non-modify**
 
 - [all_of](https://github.com/bgpark82/algorithm/tree/master/library/algorithm/sequence/non-modify/all_of)
+- [any_of](https://github.com/bgpark82/algorithm/tree/master/library/algorithm/sequence/non-modify/any_of)
+- [none_of](https://github.com/bgpark82/algorithm/tree/master/library/algorithm/sequence/non-modify/none_of)
+- [for_each](https://github.com/bgpark82/algorithm/tree/master/library/algorithm/sequence/non-modify/for_each)
+- [find](https://github.com/bgpark82/algorithm/tree/master/library/algorithm/sequence/non-modify/find)
+- [find_if](https://github.com/bgpark82/algorithm/tree/master/library/algorithm/sequence/non-modify/find_if)
+- [find_end](https://github.com/bgpark82/algorithm/tree/master/library/algorithm/sequence/non-modify/find_end)
 
 **binary search**
 
