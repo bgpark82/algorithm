@@ -44,7 +44,7 @@ bool pred(int i) {
 int main(void) {
     vector<int> foo = {0, 1, -1, 3, -3, 5, -5};
     cout << any_of(foo.begin(), foo.end(), pred) << endl;
-    cout << any_of(foo.begin(), foo.end(), [](int i) { return i > 0; }) << endl;
+    cout << any_of(foo.begin(), foo.end( ), [](int i) { return i > 0; }) << endl;
     cout << cany_of(foo.begin(), foo.end(), pred) << endl;
 
     return 0;
