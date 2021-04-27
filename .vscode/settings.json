@@ -26,6 +26,8 @@
         "__locale": "cpp",
         "__string": "cpp",
         "regex": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "iostream": "cpp",
+        "*.tcc": "cpp"
     }
 }
