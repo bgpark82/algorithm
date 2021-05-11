@@ -6,28 +6,38 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Q6",
+            "name": "Launch MergeSort",
             "request": "launch",
-            "mainClass": "Q6"
+            "mainClass": "MergeSort",
+            "projectName": "algorithm_acb5d111"
         },
         {
             "type": "java",
-            "name": "Launch Q",
+            "name": "Launch HeapSort",
             "request": "launch",
-            "mainClass": "Q"
+            "mainClass": "HeapSort",
+            "projectName": "algorithm_acb5d111"
         },
         {
             "type": "java",
-            "name": "Launch Main",
+            "name": "Launch QuickSort",
             "request": "launch",
-            "mainClass": "Main",
+            "mainClass": "QuickSort",
+            "projectName": "algorithm_acb5d111"
+        },
+        {
+            "type": "java",
+            "name": "Launch InsertionSort",
+            "request": "launch",
+            "mainClass": "InsertionSort",
             "projectName": ""
         },
         {
             "type": "java",
-            "name": "Launch Solution",
+            "name": "java 디버깅",
             "request": "launch",
-            "mainClass": "Solution"
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "cwd": "${workspaceFolder}"
         },
         {
             "name": "c++ 디버깅",

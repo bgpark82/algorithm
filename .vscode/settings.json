@@ -29,5 +29,12 @@
         "string_view": "cpp",
         "iostream": "cpp",
         "*.tcc": "cpp"
-    }
+    },
+    "java.project.sourcePaths": [
+        "algorithm/sort/quick-sort",
+        "algorithm/sort/insertion-sort",
+        "algorithm/sort/heap-sort",
+        "algorithm/sort/merge-sort"
+    ],
+    "java.format.settings.url": "eclipse-formatter.xml"
 }
