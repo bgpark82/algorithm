@@ -32,9 +32,10 @@
     },
     "java.project.sourcePaths": [
         "algorithm/sort/quick-sort",
+        "algorithm/sort/merge-sort",
         "algorithm/sort/insertion-sort",
         "algorithm/sort/heap-sort",
-        "algorithm/sort/merge-sort"
+        "algorithm/heap"
     ],
     "java.format.settings.url": "eclipse-formatter.xml"
 }

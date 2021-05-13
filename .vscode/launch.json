@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MaxHeap",
+            "request": "launch",
+            "mainClass": "MaxHeap",
+            "projectName": "algorithm_acb5d111"
+        },
+        {
+            "type": "java",
+            "name": "Launch Review",
+            "request": "launch",
+            "mainClass": "Review",
+            "projectName": "algorithm_acb5d111"
+        },
+        {
+            "type": "java",
             "name": "Launch MergeSort",
             "request": "launch",
             "mainClass": "MergeSort",
