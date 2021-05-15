@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch KMP",
+            "request": "launch",
+            "mainClass": "KMP",
+            "projectName": "algorithm_acb5d111"
+        },
+        {
+            "type": "java",
             "name": "Launch RabinKarp",
             "request": "launch",
             "mainClass": "RabinKarp",
