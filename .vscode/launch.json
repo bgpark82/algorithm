@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch UnionFind",
+            "request": "launch",
+            "mainClass": "UnionFind",
+            "projectName": "algorithm_acb5d111"
+        },
+        {
+            "type": "java",
             "name": "Launch KMP",
             "request": "launch",
             "mainClass": "KMP",

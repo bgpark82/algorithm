@@ -32,12 +32,13 @@
     },
     "java.project.sourcePaths": [
         "algorithm/string/rabin-karp",
+        "algorithm/string/kmp",
         "algorithm/sort/quick-sort",
         "algorithm/sort/merge-sort",
         "algorithm/sort/insertion-sort",
         "algorithm/sort/heap-sort",
         "algorithm/heap",
-        "algorithm/string/kmp"
+        "algorithm/graph/union-find"
     ],
     "java.format.settings.url": "eclipse-formatter.xml"
 }
