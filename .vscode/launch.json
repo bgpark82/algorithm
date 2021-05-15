@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch B1655",
+            "request": "launch",
+            "mainClass": "B1655",
+            "projectName": "algorithm_acb5d111"
+        },
+        {
+            "type": "java",
+            "name": "Launch B2606",
+            "request": "launch",
+            "mainClass": "B2606",
+            "projectName": "algorithm_acb5d111"
+        },
+        {
+            "type": "java",
             "name": "Launch UnionFind",
             "request": "launch",
             "mainClass": "UnionFind",

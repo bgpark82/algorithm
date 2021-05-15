@@ -31,6 +31,7 @@
         "*.tcc": "cpp"
     },
     "java.project.sourcePaths": [
+        "java/graph/union-find",
         "algorithm/string/rabin-karp",
         "algorithm/string/kmp",
         "algorithm/sort/quick-sort",
@@ -38,7 +39,8 @@
         "algorithm/sort/insertion-sort",
         "algorithm/sort/heap-sort",
         "algorithm/heap",
-        "algorithm/graph/union-find"
+        "algorithm/graph/union-find",
+        "java/heap"
     ],
     "java.format.settings.url": "eclipse-formatter.xml"
 }
