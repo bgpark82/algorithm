@@ -19,8 +19,8 @@ public class QuickSort {
 
         while (left <= right) {
 
-            while (arr[left] < pivot) left++;
-            while (arr[right] > pivot) right--;
+            while (arr[left] < pivot) left++; // 중간값이 왼쪽값 보다 크면 왼쪽 인덱스를 계속 증가
+            while (arr[right] > pivot) right--; // 즁간값이 오른쪽값 보다 작으면 오른쪽 인덱스를 계속 감소
 
             if (left <= right) {
                 swap(arr, left, right);
@@ -32,7 +32,6 @@ public class QuickSort {
     }
 
     static int[] quickSort(int[] arr, int left, int right) {
-
         if (left < right) {
 
             int mid = partition(arr, left, right);
