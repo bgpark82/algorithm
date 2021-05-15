@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch RabinKarp",
+            "request": "launch",
+            "mainClass": "RabinKarp",
+            "projectName": "algorithm_acb5d111"
+        },
+        {
+            "type": "java",
             "name": "Launch MaxHeap",
             "request": "launch",
             "mainClass": "MaxHeap",

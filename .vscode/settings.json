@@ -35,7 +35,8 @@
         "algorithm/sort/merge-sort",
         "algorithm/sort/insertion-sort",
         "algorithm/sort/heap-sort",
-        "algorithm/heap"
+        "algorithm/heap",
+        "algorithm/string/rabin-karp"
     ],
     "java.format.settings.url": "eclipse-formatter.xml"
 }
