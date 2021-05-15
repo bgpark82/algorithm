@@ -33,6 +33,7 @@
     "java.project.sourcePaths": [
         "java/heap",
         "java/graph/union-find",
+        "java/divide_and_conquer",
         "algorithm/string/rabin-karp",
         "algorithm/string/kmp",
         "algorithm/sort/quick-sort",
@@ -41,7 +42,7 @@
         "algorithm/sort/heap-sort",
         "algorithm/heap",
         "algorithm/graph/union-find",
-        "java/divide_and_conquer"
+        "java/graph/bfs"
     ],
     "java.format.settings.url": "eclipse-formatter.xml"
 }

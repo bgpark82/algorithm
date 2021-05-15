@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch B2178",
+            "request": "launch",
+            "mainClass": "B2178",
+            "projectName": "algorithm_acb5d111"
+        },
+        {
+            "type": "java",
             "name": "Launch B10815R",
             "request": "launch",
             "mainClass": "B10815R",
