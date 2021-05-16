@@ -1,5 +1,3 @@
-package brute_force.bitmask;
-
 import java.util.Scanner;
 
 /**
@@ -10,42 +8,6 @@ import java.util.Scanner;
  */
 public class B1182 {
 
-    //    public static void main(String[] args) {
-//
-//        Scanner sc = new Scanner(System.in);
-//        int size = sc.nextInt();
-//        int N = sc.nextInt();
-//        int[] arr = new int[size];
-//        // 5개의 숫자이므로 00000부터 11111까
-//        for (int i = 0; i < size; i++) {
-//            arr[i] = sc.nextInt();
-//        }
-//        int answer = 0;
-//        // 0 <= i <= 31
-//        int total = (1 << size);
-//        for (int i = 0; i < total; i++) {
-//            /** i는 집합이 된다
-//             *  1 = [0]
-//             *  2 = [2]
-//             *  3 = [2,1]
-//             *  4 = [4]
-//             *  5 = [4,1]
-//             */
-//            int sum = 0;
-//            // 0 <= k <= 5
-//            for (int k=0; k < size; k++) {
-//                int temp = (i & (1 << k));
-//                /** 집합에 0부터 5까지 있는지 살펴본다 */
-//                if (temp != 0) {
-//                    sum += arr[k];
-//                }
-//            }
-//            if (sum == N) {
-//                answer += 1;
-//            }
-//        }
-//        System.out.println(answer);
-//    }
     static int ans = 0;
 
     public static void backtrack(int[]a, int sum, int index, int s) {
