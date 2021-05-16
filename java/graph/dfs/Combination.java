@@ -1,5 +1,3 @@
-package graph.dfs;
-
 public class Combination {
 
     private static int n = 5;                                        // 5가지 숫자 중
@@ -9,6 +7,22 @@ public class Combination {
 
     public static void main(String[] args) {
         combination(0,0);
+    }
+
+    private static void comb(int index, int depth) {
+        if(depth == r) {
+            print();
+            return;
+        }
+
+        if(index == n) {
+            return;
+        }
+
+        answer[depth] = answer[index];
+
+        comb(index+1, depth+1);
+        comb(index+1, depth);
     }
 
     private static void combination(int index, int depth) {

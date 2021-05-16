@@ -1,82 +1,48 @@
 public class Permutation {
 
+    private static int n = 5;
+    private static int r = 3;
+    private static int[] input = {1,2,3,4,5};
+    private static boolean[] check = new boolean[n];
+    private static int[] ans = new int[r];
+
     public static void main(String[] args) {
-        int n = 5;                                  // 3가지 숫자 중
-        int r = 3;                                  // 2개를 뽑을 경우
-        int[] input = {1,2,3,4,5};                      // 주어진 3가지 숫자
-        int[] answer = new int[r];                  // 정답을 담을 배열
-        boolean[] check = new boolean[n];           // 해당 숫자를 방문했는지 체크
 
-
-        // 순열
-        permutation(n, r, input, check, answer, 0);
-        // 중복순열
-//        permutationDup(n, r, input, answer, 0);
-        // 조합
-//        combination(answer, input, n, r, 0, 0);
-        // 중복조합
-//        combinationDup(answer, input, n, r, 0, 0);
-
+        // permRep(0);
+        perm(0);
     }
 
-    public static void permutation(int n, int r, int[] input, boolean[] check, int[] answer, int depth) {
+    private static void perm(int depth) {
         if(depth == r) {
-            print(answer);
+            print();
             return;
         }
 
-        for (int i = 0; i < n; i++){
-            if (!check[i]) {
-                check[i] = true;
-                answer[depth] = input[i];
-                permutation(n, r, input, check, answer, depth+1);
-                check[i] = false;
-            }
+        for(int index = 0; index < n; index++) {
+            if(!check[index]) {
+                check[index] = true;
+                ans[depth] = input[index];
+                perm(depth+1);
+                check[index] = false;
+            } 
         }
     }
 
-    public static void permutationDup(int n, int r, int[] input, int[] answer, int depth) {
+    private static void permRep(int depth) {
         if(depth == r) {
-            print(answer);
+            print();
             return;
         }
-
-        for (int i = 0; i < n; i++){
-            answer[depth] = input[i];
-            permutationDup(n, r, input,  answer, depth+1);
+        
+        for(int index = 0; index < n; index++) {
+            ans[depth] = input[index];
+            permRep(depth+1);
         }
     }
 
-    public static void combination(int[] answer, int[] input, int n, int r, int depth, int index) {
-
-        if(depth == r) {
-            print(answer);
-            return;
-        }
-        if(index == n) return;
-
-        answer[depth] = input[index];
-        combination(answer, input, n, r, depth + 1, index + 1);
-        combination(answer, input, n, r, depth, index + 1);
-    }
-
-    public static void combinationDup(int[] answer, int[] input, int n, int r, int depth, int index) {
-
-        if(depth == r) {
-            print(answer);
-            return;
-        }
-        if(index == n) return;
-
-        answer[depth] = input[index];
-        // 차이점은 depth는 안늘어나고 index만 늘어나네
-        combinationDup(answer, input, n, r,depth + 1, index);
-        combinationDup(answer, input, n, r, depth, index + 1);
-    }
-
-    public static void print(int[] answer) {
-        for(Integer ans : answer) {
-            System.out.print(ans + " ");
+    public static void print() {
+        for(Integer a : ans) {
+            System.out.print(a + " ");
         }
         System.out.println();
     }
