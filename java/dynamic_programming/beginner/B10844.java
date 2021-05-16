@@ -1,4 +1,3 @@
-package dynamic_programming.beginner;
 
 import java.util.Scanner;
 

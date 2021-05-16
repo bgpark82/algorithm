@@ -31,11 +31,13 @@
         "*.tcc": "cpp"
     },
     "java.project.sourcePaths": [
+        "test",
         "java/string",
         "java/heap",
         "java/graph/union-find",
         "java/graph/dfs",
         "java/graph/bfs",
+        "java/dynamic_programming/beginner",
         "java/divide_and_conquer",
         "java/brute_force/bitmask",
         "algorithm/string/rabin-karp",
@@ -46,7 +48,7 @@
         "algorithm/sort/heap-sort",
         "algorithm/heap",
         "algorithm/graph/union-find",
-        "java/dynamic_programming/beginner"
+        "java"
     ],
     "java.format.settings.url": "eclipse-formatter.xml"
 }
