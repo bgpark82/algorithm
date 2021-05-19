@@ -1,5 +1,11 @@
 # Question 1
 
+1. 문자열은 **char의 배열**이다.
+2. 각 **char는 ascii 코드와 매칭**이 된다
+### 자료구조
+- ascii의 경우, **크기 127인 배열**로 표현가능하다
+- extend ascii의 경우, **크기 256인 배열로** 표현이 가능하다
+- bit mask로 해당 ascii의 자리수가 있는지 판별 가능하다
 ## Check point
 
 Ask to interviewer
