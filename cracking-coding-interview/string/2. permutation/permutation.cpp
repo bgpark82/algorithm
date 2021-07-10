@@ -23,7 +23,7 @@ bool isPermutation2(string origin, string target) {
             return false;
         }
     }
-    return true;
+    return true; 
     
 }
 
