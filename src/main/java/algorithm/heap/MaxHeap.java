@@ -1,3 +1,5 @@
+package algorithm.heap;
+
 public class MaxHeap {
 
     private int[] Heap;

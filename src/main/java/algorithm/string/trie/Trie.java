@@ -1,3 +1,5 @@
+package algorithm.string.trie;
+
 public class Trie {
     
     static TrieNode root;

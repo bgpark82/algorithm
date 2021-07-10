@@ -1,3 +1,5 @@
+package algorithm.binarySearch;
+
 public class UpperBoundLowerBound {
     
     public static void main(String[] args) {
