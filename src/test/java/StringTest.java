@@ -22,4 +22,13 @@ public class StringTest {
         assertThat(a.equals(b)).isTrue();
         assertThat(a == b).isTrue();
     }
+
+    @Test
+    void isLetterOrDigit() {
+        char letter = 'a';
+        char digit = '1';
+
+        assertThat(Character.isLetterOrDigit(letter)).isTrue();
+
+    }
 }
